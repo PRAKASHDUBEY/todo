@@ -43,13 +43,10 @@ const getAllTasks = asyncHandler(async (req, res) => {
 });
 
 const getTasksByTag = asyncHandler(async (req, res) => {
-  if (!req.query.tag) {
-    throw new ApiError(400, "Tag id required");
-  }
 
   const tasks = await Task.find({
     createdBy: req.user.id,
-    tag: req.query.tag,
+    tag: req.params.tagId,
   });
 
   return res
