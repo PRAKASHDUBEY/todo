@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:8000/api/v1";
+// const API_URL = "http://localhost:8000/api/v1";
+const API_URL = "https://todo-d3fd.onrender.com/api/v1";
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("changePasswordForm");
