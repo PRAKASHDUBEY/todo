@@ -1,8 +1,8 @@
-import { asyncHandler } from "../utils/asyncHandler";
-import { ApiError } from "../utils/ApiError";
-import { ApiResponse } from "../utils/ApiResponse";
-import { Tag } from "../models/tag.model";
-import { Task } from "../models/task.model";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import { ApiError } from "../utils/ApiError.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
+import { Tag } from "../models/tag.model.js";
+import { Task } from "../models/task.model.js";
 
 
 const createTag = asyncHandler(async (req, res) => {

@@ -5,9 +5,9 @@ import {
     getTasksByTag,
     updateTask,
     deleteTask,
-} from "../controllers/task.controller";
+} from "../controllers/task.controller.js";
 
-import { verifyJWT } from "../middlewares/auth.middleware";
+import { verifyJWT } from "../middlewares/auth.middleware.js";
 
 const router = Router()
 

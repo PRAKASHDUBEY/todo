@@ -1,7 +1,7 @@
-import { asyncHandler } from "../utils/asyncHandler";
-import { ApiError } from "../utils/ApiError";
-import { ApiResponse } from "../utils/ApiResponse";
-import { Task } from "../models/task.model";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import { ApiError } from "../utils/ApiError.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
+import { Task } from "../models/task.model.js";
 
 const createTask = asyncHandler(async (req, res) => {
   let { title, description, dueDate, priority, tag } = req.body;
@@ -61,7 +61,7 @@ const updateTask = asyncHandler(async (req, res) => {
     throw new ApiError(403, "Unauthorized");
   }
 
-  const { title, description, priority,dueDate, status, tag } = req.body;
+  let { title, description, priority,dueDate, status, tag } = req.body;
 
   if(!dueDate)dueDate = undefined;
   else dueDate = new Date(dueDate);

@@ -4,9 +4,9 @@ import {
     getAllTags,
     updateTag,
     deleteTag,
-} from "../controllers/tag.controller";
+} from "../controllers/tag.controller.js";
 
-import { verifyJWT } from "../middlewares/auth.middleware";
+import { verifyJWT } from "../middlewares/auth.middleware.js";
 
 const router = Router()
 
