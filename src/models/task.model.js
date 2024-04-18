@@ -24,15 +24,13 @@ const taskSchema = new Schema({
     enum: ['pending', 'completed'],
     default: 'pending'
   },
-  tags: [{
+  tags: {
     type: Schema.Types.ObjectId,
     ref: 'Tag',
-    required:true
-  }],
+  },
   createdBy: {
     type: Schema.Types.ObjectId,
     ref: 'User',
-    required: true
   }
 },{
     timestamps: true
